@@ -33,4 +33,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 models:
   airbnb_dbt_learn:
+    +materialized: view
+  dim:
+    +materialized: table
+  
+
 
