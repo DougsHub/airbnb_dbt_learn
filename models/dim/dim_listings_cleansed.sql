@@ -1,4 +1,10 @@
- with src_listings as (
+{{
+    config(
+        materialized='view'
+    )
+}}
+
+WITH src_listings as (
     SELECT * from {{ ref('src_listings') }}
 )
 
